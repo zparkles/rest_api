@@ -5,7 +5,6 @@ import { getName, getNIM, getYMD } from './query.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
-import url from 'url'
 dotenv.config()
 
 const app = express()
@@ -43,13 +42,6 @@ app.get('/data', authenticateToken,async(req, res)=> {
 
 
 
-/** 
-app.get('/users',async (req, res)=> {
-        const users = await getUsers();
-        console.log(users);
-        res.send(users); 
-     
-})*/
 
 app.get('/users',authenticateToken, async (req, res)=> {
     const username = req.body.username
