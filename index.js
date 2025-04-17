@@ -16,7 +16,7 @@ const PORT = 5000;
 app.use(bodyParser.json())
 
 
-app.get('/', async(req, res)=> {
+app.get('/data', authenticateToken,async(req, res)=> {
     const {NAMA, NIM, YMD} = req.body
     if (NAMA && !NIM && !YMD) {
         const foundName = await getName(NAMA)
