@@ -1,0 +1,11 @@
+CREATE DATABASE rest_api;
+USE rest_api;
+
+CREATE TABLE users (
+    id integer PRIMARY KEY AUTO_INCREMENT,
+    nama VARCHAR(255) NOT NULL,
+    password CHAR(255) NOT NULL,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL,
+    created TIMESTAMP NOT NULL DEFAULT NOW()
+);
