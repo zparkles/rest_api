@@ -4,6 +4,7 @@
 2. _Setup_ informasi _database_ di .env
 
 - _Setup server_:
+  
   _Port_ untuk login dan autentikasi dipisah dengan bagian CRUD dan cari data sehingga dua _file_ yang mengandung _port_ berbeda ini perlu dijalankan secara bersamaan. _File_ index.js dijalankan dengan `npm start` dan _file_ authentication.js dijalankan dengan `npm run startauth`, seperti yang tertera di _file_ package.json.
 
 
